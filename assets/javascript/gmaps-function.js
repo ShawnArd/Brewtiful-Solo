@@ -19,28 +19,34 @@ $("#user-submit").on("click", function() {
 
 function getCoordinates(zipCode, userRadius){
 console.log(zipCode)
-    var apiKey = 'ST0tiPiOJyYCgPyT9KnK5exY5K9WxAdKwsrqkK6wIjRtFRo9JgJ2TxOCVxVlXZ9L';
+    var apiKey = 'qzKbuskfg5sIQkMo3t1ElpUusUOLgnuG5VCI8L9LGdi9rHaKaA8cE33ImOVcamEF';
     // console.log(process.env)
     // test zip code
     userZipCode = zipCode
+
+    var lat = '41.921201';
+    var lng = '-87.700934';
+    searchGooglePlaces(lat, lng, userRadius)
     
 
-    var queryURL = "https://cors-anywhere.herokuapp.com/https://www.zipcodeapi.com/rest/" + apiKey + "/info.json/" + userZipCode + "/degrees";
+    // var queryURL = "https://cors-anywhere.herokuapp.com/https://www.zipcodeapi.com/rest/" + apiKey + "/info.json/" + userZipCode + "/degrees";
    
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }) .then(function(response) {
-        console.log(response);
-         var lat = response.lat;
-       var lng = response.lng;
-        // console.log(lat);
-        // // userSearch.push({userLat: lat});
+    // $.ajax({
+    //     url: queryURL,
+    //     method: "GET"
+    // }) .then(function(response) {
+    //     console.log(response);
         
-        // console.log(response.lng);
-        searchGooglePlaces(lat, lng, userRadius)
-        // embedMaps(lat, lng)
-    })
+
+    //      var lat = response.lat;
+    //    var lng = response.lng;
+    //     console.log(lat);
+    //     // userSearch.push({userLat: lat});
+        
+    //     console.log(response.lng);
+    //     searchGooglePlaces(lat, lng, userRadius)
+    //     embedMaps(lat, lng)
+    // })
     
         
 };
@@ -73,6 +79,7 @@ function embedMaps(lat, lng){
 };
 
 function searchGooglePlaces(lat, lng, userRadius){
+    let locations = []
     console.log('User Radius', userRadius)
     var apiKey = "AIzaSyDKJCcjoCqjxsghZXE9KPC8zS_ia6Jl8DQ";
     var geocoordinates = lat+","+lng;
@@ -87,17 +94,49 @@ function searchGooglePlaces(lat, lng, userRadius){
         console.log(response.results[0].name, response.results[0].rating)
         var results = response.results;
 
-      for (let i = 0; i <=results.length ; i++) {
+    //   for (let i = 0; i <=results.length ; i++) {
 
-        // Creating and storing a div tag and adding a class so you can float the gifs
-        var brewDiv = $("<div class='brew-div'>");
+    //     // Creating and storing a div tag and adding a class so you can float the gifs
+    //     var brewDiv = $("<div class='brew-div'>");
       
-        var p = $("<p>").text(results[i].name+ ", Rating: " + results[i].rating+ ", Address: "+results[i].vicinity);
+    //     var p = $("<p>").text(results[i].name+ ", Rating: " + results[i].rating+ ", Address: "+results[i].vicinity);
 
-        brewDiv.append(p);
+    //     brewDiv.append(p);
         
-        $("#brewery-table").prepend(brewDiv);
-      }
+    //     $("#brewery-table").prepend(brewDiv);
+    //   }
+
+    //  locations = [
+    //     ['Bondi Beach', -33.890542, 151.274856, 4],
+    //     ['Coogee Beach', -33.923036, 151.259052, 5],
+    //     ['Cronulla Beach', -34.028249, 151.157507, 3],
+    //     ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+    //     ['Maroubra Beach', -33.950198, 151.259302, 1]
+    //   ];
+  
+    //   var map = new google.maps.Map(document.getElementById('map'), {
+    //     zoom: 10,
+    //     center: new google.maps.LatLng(-33.92, 151.25),
+    //     mapTypeId: google.maps.MapTypeId.ROADMAP
+    //   });
+  
+    //   var infowindow = new google.maps.InfoWindow();
+  
+    //   var marker;
+  
+    //   for (let i = 0; i < locations.length; i++) {  
+    //     marker = new google.maps.Marker({
+    //       position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+    //       map: map
+    //     });
+  
+    //     google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    //       return function() {
+    //         infowindow.setContent(locations[i][0]);
+    //         infowindow.open(map, marker);
+    //       }
+    //     })(marker, i));
+    //   }
 
     });
 };
