@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/Brewtiful.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lily+Script+One&effect=shadow-multiple" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lemon|Lilita+One|Rancho" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,600" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="header">
+    <nav class="navbar navbar-expand-md navbar-dark my-nav" id="nav">
+
+      <div class="mx-auto order-0" id="name">
+        <a class="navbar-brand mx-auto" href="index.html">
+          <h1 class="display-4">Brewtiful</h1>
+        </a>
+      </div>
+
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" id="navi" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navi" href="about.html">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" id="navi" href="forum.html">Forum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navi" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="page"></div>
+  <div class="jumbotron">
+    <h1 class="display-5">Find Nearby Breweries And New Beer</h1>
+    <p class="mytext"></p>
+    <hr class="my-4">
+    <p class="mytext"></p>
+
+    <form>
+      <div class="row">
+          <div class="col-md-3">
+          </div>
+        <div class="col-md-3">
+          <div class="form-row align-items-center">
+
+            <label class="sr-only" for="inlineFormInput">location</label>
+            <input type="text" class="form-control mb-2" id="user-zip-code" placeholder="Enter you ZipCode for breweries near you!">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-group">
+            <select class="custom-select" id="distance-select" aria-label="Example select with button addon">
+              <option selected>Distance (km)</option>
+              <option value=1000>1 km</option>
+              <option value=3000>3 km</option>
+              <option value=5000>5 km</option>
+              <option value=10000>10 km</option>
+            </select>
+            </div>
+          </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-danger mb-2" id="user-submit">Search</button>
+        </div>
+
+        <!-- <div class="col-md-5">
+          <div class="input-group">
+            <select class="custom-select" id="beer-select" aria-label="Example select with button addon">
+              <option selected>Choose your style of beer!</option>
+              <option value="IPA">IPA</option>
+              <option value="Pilsener">Pilsener</option>
+            </select>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary btn-warning" id="user-select" type="button">Search</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </form>
+    <div class="row">
+      <div class="col-md-6">
+        <div id="brewery-table"></div>
+      </div>
+      <div class="col-md-4">
+        <div id="beer-table"></div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <!-- <div id="beer-table"></div> -->
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container-footer">
+      <i class="far fa-copyright"></i>
+      Copyright by Brewtiful
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="assets/javascript/gmaps-function.js"></script>
+  <script src="assets/javascript/beer-function.js"></script>
+
+
+</body>
+
+</html>

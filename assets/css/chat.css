@@ -1,0 +1,61 @@
+/**Forum-Chat-page**/
+.display-text {
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  
+  div .container-1 {
+    height: 320px;
+    width: 550px;
+    float: left;
+    padding: 20px;
+    overflow: scroll;
+    margin-left: 130px;
+    /* scrollbar-3dlight-color: #FFFFFF;
+    scrollbar-base-color: red; */
+  }
+  /* div .container-1::-webkit-scrollbar{ */
+    /* background-color: white; */
+    /* scrollbar-base-color: red;
+    scrollbar-3dlight-color: aqua; */
+
+  /* } */
+
+  div .container-1::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+/* div .container-1::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px red;
+}
+  */
+div .container-1::-webkit-scrollbar-thumb {
+  background-color: lightgoldenrodyellow;
+  outline: 1px solid lightgoldenrodyellow;
+}
+  .container {
+    background-color: black;
+  
+  }
+  p {
+    background: wheat;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+  }
+  .form-group {
+      width: 480px;
+      margin-left: 164px;
+      margin-top: 10px;
+  }
+  
+  input:hover {
+   background-color: lightgoldenrodyellow;
+  }
+  #validation {
+    color: red;
+  }
+  #chatBtn {
+margin-left: 500px;
+  }
+  

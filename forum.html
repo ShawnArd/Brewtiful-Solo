@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/Brewtiful.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/chat.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lily+Script+One&effect=shadow-multiple" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemon|Lilita+One|Rancho" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-md navbar-dark " id="nav">
+
+            <div class="mx-auto order-0" id="name">
+                <a class="navbar-brand mx-auto" href="index.html">
+                    <h1 class="display-4">Brewtiful</h1>
+                </a>
+            </div>
+
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" id="navi" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navi" href="about.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="navi" href="forum.html">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navi" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="page"></div>
+    <div class="jumbotron">
+
+        <h1 class="display-6">Chat and Comment!</h1>
+        <!-- <h2> but let's CHAT!</h2> -->
+        <div class="container-1">
+            <div class="container">
+                <div id="chat-display">
+                    <p id="time-show"></p>
+                </div>
+            </div>
+        </div>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="user-name" placeholder="type here your name " />
+                <div id="validation"></div>
+                <br>
+                <input type="text" class="form-control" id="user-input" placeholder="type here..." />
+
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-danger" id="chatBtn">Live Chat</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="container-footer">
+            <i class="far fa-copyright"></i>
+            Copyright by Brewtiful
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/forum.js"></script>
+</body>
+
+</html>
