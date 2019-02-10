@@ -19,7 +19,9 @@ BreweryDB API's<br/>
 
 # The Interface / Design
  
- ![Screenshot](https://shawnard.github.io/Brewtiful/assets/images/interfacedesign.png)
+ ![Design](./assets/images/interfacedesign.png)
+
+ ![Maps Page](./assets/images/Map.png)
  
  
 # Collaborators Include
