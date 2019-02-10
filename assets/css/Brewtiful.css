@@ -121,6 +121,10 @@ text-shadow: 4px 4px 4px rgb(222,184,135)
   
 } */
 
+#brewery-table {
+  margin: auto 0;
+}
+
 .brew-div {
   background-color: #ffffff;
   margin:5px 0px;
@@ -182,4 +186,14 @@ footer {
 .container-footer {
   color: #ffffff;
   text-align: center;
+}
+
+#map {
+  /* height: 250px;
+  width: 250px; */
+  background-color: white;
+  /* opacity: 0.5; */
+  height: 500px;
+  width: 800px;
+  /* note from ry - wrapper height for this element is always 500px - this forces the width to ~golden ratio */
 }

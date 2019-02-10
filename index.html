@@ -54,7 +54,7 @@
   </div>
   <div class="page"></div>
   <div class="jumbotron">
-    <h1 class="display-5">Find Nearby Breweries And New Beer</h1>
+    <h1 class="display-5">Find Nearby Breweries!</h1>
     <p class="mytext"></p>
     <hr class="my-4">
     <p class="mytext"></p>
@@ -84,6 +84,42 @@
         <div class="col-md-2">
           <button type="button" class="btn btn-danger mb-2" id="user-submit">Search</button>
         </div>
+      </div>
+    </form>
+    <br>
+    <div class="mapListWrapper">
+      <div class='row'>
+        <div id="map" class="col-md-7">Google Map</div>
+        <div class="content-wrap2 col-md-3">
+          <div id="listHolder" class="list-group list-group-flush">
+            <ol></ol>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+<!--       
+    <div class="row">
+      <div class="col-md-6">
+        <div id="brewery-table"></div>
+      </div>
+    </div>
+   -->
+  <footer>
+    <div class="container-footer">
+      <i class="far fa-copyright"></i>
+      Copyright by Brewtiful
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <!-- <script src="assets/javascript/gmaps-function.js"></script>
+  <script src="assets/javascript/beer-function.js"></script> -->
+  <script src="assets/javascript/map.js"></script>
+</body>
+
+</html>
+
 
         <!-- <div class="col-md-5">
           <div class="input-group">
@@ -97,38 +133,9 @@
             </div>
           </div>
         </div> -->
-      </div>
-    </form>
-    <br>
-    <div id="map" style="width: 500px; height: 400px;"></div>
-    <div class="row">
-      <div class="col-md-6">
-        <div id="brewery-table"></div>
-      </div>
-      <div class="col-md-4">
+
+            <!-- <div class="row">
+      <div class="col-md-8">
         <div id="beer-table"></div>
       </div>
-
-    </div>
-    <div class="row">
-      <div class="col-md-8">
-        <!-- <div id="beer-table"></div> -->
-      </div>
-    </div>
-  </div>
-  <footer>
-    <div class="container-footer">
-      <i class="far fa-copyright"></i>
-      Copyright by Brewtiful
-    </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-    <!-- <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script> -->
-  <script src="assets/javascript/gmaps-function.js"></script>
-  <script src="assets/javascript/beer-function.js"></script>
-
-
-</body>
-
-</html>
+    </div> -->
