@@ -198,3 +198,8 @@ footer {
   width: 800px;
   /* note from ry - wrapper height for this element is always 500px - this forces the width to ~golden ratio */
 }
+@media (max-width: 680px) {
+  .jumbotron {
+    width: 100%;
+  }
+}

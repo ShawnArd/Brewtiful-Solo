@@ -11,7 +11,7 @@ var resultsId = [];
 
 /** Initialize the map information
  *
- * Using the latitude and longitude from firebase, this sets the map on those coordinates and sets the zoom.
+ * Using the latitude and longitude from  this sets the map on those coordinates and sets the zoom.
  * This also pushes the results from the FOURSQUARE query into a list that is displayed next to the map.
  *
  * This gets called as part of the Google maps API.
