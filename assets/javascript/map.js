@@ -19,7 +19,7 @@ var resultsId = [];
 function initMap() {
     //this functional has to match final call
     var map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 41.921201, lng: -87.700934 },
+        center: { lat: searchLat, lng: searchLng },
         zoom: 13,
         zoomControl: true,
         mapTypeControl: false,
@@ -86,10 +86,10 @@ function getCoordinates(zipCode, userRadius){
             console.log(response);
             
     
-            let lat = response.lat;
-            let lng = response.lng;
+            searchLat = response.lat;
+            searchLng = response.lng;
           
-            searchGooglePlaces(lat, lng, userRadius)
+            searchGooglePlaces(searchLat, searchLng, userRadius)
         })
         
 }
