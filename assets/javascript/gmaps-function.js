@@ -45,7 +45,6 @@ console.log(zipCode)
         
         console.log(response.lng);
         searchGooglePlaces(lat, lng, userRadius)
-        embedMaps(lat, lng)
     })
     
         

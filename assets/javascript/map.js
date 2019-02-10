@@ -74,15 +74,24 @@ function convertResults(results) {
 }
 
 function getCoordinates(zipCode, userRadius){
-    console.log(zipCode)
+
         var apiKey = 'qzKbuskfg5sIQkMo3t1ElpUusUOLgnuG5VCI8L9LGdi9rHaKaA8cE33ImOVcamEF';
-        // console.log(process.env)
-        // test zip code
-        userZipCode = zipCode
     
-        var lat = '41.921201';
-        var lng = '-87.700934';
-        searchGooglePlaces(lat, lng, userRadius)
+        var queryURL = "https://cors-anywhere.herokuapp.com/https://www.zipcodeapi.com/rest/" + apiKey + "/info.json/" + zipCode + "/degrees";
+   
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }) .then(function(response) {
+            console.log(response);
+            
+    
+            let lat = response.lat;
+            let lng = response.lng;
+          
+            searchGooglePlaces(lat, lng, userRadius)
+        })
+        
 }
 
 function searchGooglePlaces(lat, lng, userRadius){
@@ -132,51 +141,10 @@ function searchGooglePlaces(lat, lng, userRadius){
 $(document).on("click", "#user-submit", function(event) {
     event.preventDefault();
 
-    var userZipCode = $("#user-zip-code").val().trim();
-    var userRadius = $("#distance-select").val().trim();
+    let userZipCode = $("#user-zip-code").val().trim();
+    let userRadius = $("#distance-select").val().trim();
 
     getCoordinates(userZipCode, userRadius)
 
 });
 
-
-// $("#user-submit").on("click", function() {
-//     event.preventDefault();
-//     address = $("#location").val();
-//     let resultsName = [];
-//     let resultsLat = [];
-//     let resultsLng = [];
-//     let resultsAddress = [];
-//     let resultsId = [];
-
-//     $.ajax({
-//         async: false,
-//         url: `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyA_8m3vV01mZAdSvesbW3G2rkoHLW4WP2s`,
-//         method: "GET"
-//     }).then(function(response) {
-//         searchLat = response.results[0].geometry.location.lat;
-//         searchLng = response.results[0].geometry.location.lng;
-
-//         $.ajax({
-//             async: false,
-//             url: `https://api.foursquare.com/v2/venues/explore?client_id=XLARRNIFOXVD2CYYWZTPLXOXPI3BFBECOJTZEVZAI0OCO01S&client_secret=TNAAYAFVDDSPVDK1RTGIW2VPZTBKCOAVYVXSYEBBU2MXF015&v=20180323&section=${query}&limit=30&ll=${searchLat},${searchLng}`,
-//             method: "GET"
-//         }).then(function(response) {
-//             printResults(response);
-//             $("#appendedScript").remove();
-//             $("body").append(
-//                 $(
-//                     '<script id="appendedScript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_8m3vV01mZAdSvesbW3G2rkoHLW4WP2s&callback=initMap"type="text/javascript"></script>'
-//                 )
-//             );
-//         });
-//     });
-
-//     clearMarkers();
-
-//     $("ol").remove();
-//     $("#listHolder").append($("<ol>"));
-//     for (var i = 0; i < resultsLat.length; i++) {
-//         markerArr[i].setMap(map);
-//     }
-// });
