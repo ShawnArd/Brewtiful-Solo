@@ -17,6 +17,7 @@ var resultsId = [];
  * This gets called as part of the Google maps API.
  */
 function initMap() {
+    document.getElementById("map").style.display = "block"
     //this functional has to match final call
     var map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: searchLat, lng: searchLng },

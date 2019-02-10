@@ -191,6 +191,7 @@ footer {
 #map {
   /* height: 250px;
   width: 250px; */
+  display: none;
   background-color: white;
   /* opacity: 0.5; */
   height: 500px;
