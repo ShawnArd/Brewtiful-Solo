@@ -21,7 +21,7 @@ BreweryDB API's<br/>
  
  ![Design](./assets/images/interfacedesign.png)
 
- ![Maps Page](./assets/images/Map.png)
+ ![Maps Page](./assets/images/Maps.png)
  
  
 # Collaborators Include
